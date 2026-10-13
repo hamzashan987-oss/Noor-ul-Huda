@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Noor ul Huda: Quran, Urdu translation, Tafseer, Hadith, Duas and Islamic reminders.">
+<meta name="theme-color" content="#064e3b">
+<title>Noor ul Huda | نور الہدیٰ</title>
+
+<style>
+:root {
+  --green: #075b46;
+  --dark: #06392e;
+  --gold: #e1bd70;
+  --cream: #faf8f0;
+  --white: #fff;
+  --text: #24372f;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.9;
+}
+a { overflow-wrap: anywhere; }
+header {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  border-bottom: 4px solid var(--gold);
+}
+header h1 {
+  color: var(--gold);
+  margin: 0;
+  font-size: clamp(32px, 6vw, 48px);
+}
+header p { margin: 4px; }
+nav {
+  background: var(--green);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 11px;
+  border-radius: 6px;
+}
+nav a:hover { background: #24775c; }
+.hero {
+  text-align: center;
+  padding: 55px 18px;
+  background: linear-gradient(135deg, #06392e, #0d7655);
+  color: white;
+}
+.hero h2 { color: var(--gold); font-size: 29px; }
+.hero p { max-width: 720px; margin: 10px auto 22px; }
+.container { max-width: 1100px; margin: auto; padding: 20px 16px; }
+section { padding-top: 15px; scroll-margin-top: 75px; }
+.section-title {
+  color: var(--green);
+  text-align: center;
+  margin: 22px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 17px;
+}
+.card {
+  background: var(--white);
+  border: 1px solid #e5e5d9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 12px #123b2b0a;
+  min-width: 0;
+}
+.card h3 { color: var(--green); margin-top: 0; }
+.arabic {
+  direction: rtl;
+  text-align: center;
+  font-family: "Traditional Arabic", "Noto Naskh Arabic", serif;
+  font-size: 27px;
+  line-height: 2.1;
+  color: var(--dark);
+}
+.translation {
+  background: #f1f5ed;
+  border-left: 4px solid var(--gold);
+  border-radius: 5px;
+  padding: 12px;
+}
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.btn:hover { background: #287b61; }
+.gold { color: var(--gold); }
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd7cd;
+  border-radius: 7px;
+  font-size: 16px;
+  margin: 8px 0;
+}
+.small { font-size: 13px; color: #617368; }
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  margin-top: 30px;
+}
+footer a { color: var(--gold); }
+[hidden] { display: none !important; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Noor ul Huda</h1>
+  <p class="arabic gold">نور الہدیٰ</p>
+  <p>قرآن و سنت کی روشنی میں</p>
+  <p>Quran • Hadith • Duas • Islamic Learning</p>
+</header>
+
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a>
+  <a href="#quran">قرآن</a>
+  <a href="#hadith">احادیث</a>
+  <a href="#duas">دعائیں</a>
+  <a href="#azkar">اذکار</a>
+  <a href="#videos">Videos</a>
+  <a href="#reminders">نصیحتیں</a>
+  <a href="#about">About</a>
+</nav>
+
+<div class="hero" id="home">
+  <h2>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h2>
+  <h3>Welcome to Noor ul Huda</h3>
+  <p>
+    قرآن پاک، ترجمہ، تفسیر، احادیث مبارکہ، مسنون دعاؤں
+    اور اسلامی تعلیمات کے مفید ذرائع ایک جگہ۔
+  </p>
+  <a class="btn" href="#quran">قرآن پڑھیں</a>
+  <a class="btn" href="#duas">دعائیں پڑھیں</a>
+</div>
+
+<main class="container">
+
+<section id="quran">
+  <h2 class="section-title">📖 قرآن پاک، ترجمہ اور تفسیر</h2>
+  <div class="card">
+    <h3>سورت تلاش کریں</h3>
+    <input id="quranSearch" type="search"
+      placeholder="سورت کا نام یا نمبر لکھیں...">
+    <p class="small">
+      سورت کھولنے پر آپ قرآن، دستیاب تراجم اور تفسیر کے اختیارات
+      اصل ویب سائٹ پر دیکھ سکتے ہیں۔
+    </p>
+  </div>
+
+  <div class="grid" id="surahGrid" style="margin-top:16px">
+    <div class="card surah" data-name="1 الفاتحہ al-fatihah fatiha">
+      <h3>1. سورۃ الفاتحہ</h3>
+      <p class="arabic">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</p>
+      <a class="btn" href="https://quran.com/1"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="2 البقرہ al-baqarah baqarah">
+      <h3>2. سورۃ البقرہ</h3>
+      <p class="arabic">الم</p>
+      <a class="btn" href="https://quran.com/2"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="18 الکہف kahf">
+      <h3>18. سورۃ الکہف</h3>
+      <a class="btn" href="https://quran.com/18"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="36 یس yaseen yasin">
+      <h3>36. سورۃ یٰسین</h3>
+      <a class="btn" href="https://quran.com/36"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="55 الرحمن rahman">
+      <h3>55. سورۃ الرحمٰن</h3>
+      <a class="btn" href="https://quran.com/55"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="56 الواقعہ waqiah">
+      <h3>56. سورۃ الواقعہ</h3>
+      <a class="btn" href="https://quran.com/56"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="67 الملک mulk">
+      <h3>67. سورۃ الملک</h3>
+      <a class="btn" href="https://quran.com/67"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="112 الاخلاص ikhlas">
+      <h3>112. سورۃ الاخلاص</h3>
+      <p class="arabic">قُلْ هُوَ اللَّهُ أَحَدٌ</p>
+      <a class="btn" href="https://quran.com/112"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="113 الفلق falaq">
+      <h3>113. سورۃ الفلق</h3>
+      <a class="btn" href="https://quran.com/113"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+
+    <div class="card surah" data-name="114 الناس nas">
+      <h3>114. سورۃ الناس</h3>
+      <a class="btn" href="https://quran.com/114"
+         target="_blank" rel="noopener">قرآن، ترجمہ اور تفسیر</a>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>مکمل قرآن پاک</h3>
+    <p>114 سورتوں، تراجم اور دستیاب تفاسیر کے لیے:</p>
+    <a class="btn" href="https://quran.com/"
+       target="_blank" rel="noopener">Quran.com کھولیں</a>
+    <a class="btn" href="https://api-docs.quran.com/"
+       target="_blank" rel="noopener">قرآن ڈیٹا API</a>
+    <p class="small">
+      یہ لنکس بیرونی ویب سائٹ کھولتے ہیں۔ اس HTML فائل میں
+      مکمل قرآن اور تمام تفاسیر کا ڈیٹا محفوظ نہیں ہے۔
+    </p>
+  </div>
+</section>
+
+<section id="hadith">
+  <h2 class="section-title">📚 احادیث مبارکہ</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>حدیث 1: نیت</h3>
+      <p class="arabic">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ</p>
+      <p class="translation">
+        ترجمہ: اعمال کا دارومدار نیتوں پر ہے۔
+      </p>
+      <p><b>راوی:</b> حضرت عمر بن خطاب رضی اللہ عنہ</p>
+      <p><b>حوالہ:</b> صحیح البخاری، حدیث 1</p>
+      <a class="btn" href="https://sunnah.com/bukhari:1"
+         target="_blank" rel="noopener">اصل حدیث پڑھیں</a>
+    </div>
+
+    <div class="card">
+      <h3>حدیث 2: دین میں آسانی</h3>
+      <p class="arabic">
+        إِنَّ الدِّينَ يُسْرٌ
+      </p>
+      <p class="translation">ترجمہ: بے شک دین آسان ہے۔</p>
+      <p><b>راوی:</b> حضرت ابو ہریرہ رضی اللہ عنہ</p>
+      <p><b>حوالہ:</b> صحیح البخاری، حدیث 39</p>
+      <a class="btn" href="https://sunnah.com/bukhari:39"
+         target="_blank" rel="noopener">اصل حدیث پڑھیں</a>
+    </div>
+
+    <div class="card">
+      <h3>مزید احادیث</h3>
+      <p>
+        حدیث کا مکمل متن، راوی، کتاب، حدیث نمبر اور ترجمہ
+        اصل ماخذ سے چیک کریں۔
+      </p>
+      <a class="btn" href="https://sunnah.com/"
+         target="_blank" rel="noopener">تمام کتب تلاش کریں</a>
+      <a class="btn" href="https://sunnah.com/muslim"
+         target="_blank" rel="noopener">صحیح مسلم</a>
+      <a class="btn" href="https://sunnah.com/bukhari"
+         target="_blank" rel="noopener">صحیح بخاری</a>
+    </div>
+  </div>
+
+  <p class="small">
+    یہاں چند مثالیں ہیں، تمام احادیث نہیں۔ مختلف طبعات میں
+    حدیث نمبر مختلف ہو سکتا ہے۔ اشاعت سے پہلے اصل متن اور
+    ترجمہ کی تصدیق کریں۔
+  </p>
+</section>
+
+<section id="duas">
+  <h2 class="section-title">🤲 قرآنی دعائیں</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>علم میں اضافے کی دعا</h3>
+      <p class="arabic">رَبِّ زِدْنِي عِلْمًا</p>
+      <p class="translation">اے میرے رب! میرے علم میں اضافہ فرما۔</p>
+      <p class="small">سورۃ طٰہٰ 20:114</p>
+      <a class="btn" href="https://quran.com/20/114"
+         target="_blank" rel="noopener">حوالہ دیکھیں</a>
+    </div>
+
+    <div class="card">
+      <h3>دنیا و آخرت کی بھلائی</h3>
+      <p class="arabic">
+        رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً
+        وَفِي الْآخِرَةِ حَسَنَةً
+        وَقِنَا عَذَابَ النَّارِ
+      </p>
+      <p class="translation">
+        اے ہمارے رب! ہمیں دنیا میں بھلائی عطا فرما،
+        آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔
+      </p>
+      <p class="small">سورۃ البقرہ 2:201</p>
+      <a class="btn" href="https://quran.com/2/201"
+         target="_blank" rel="noopener">حوالہ دیکھیں</a>
+    </div>
+
+    <div class="card">
+      <h3>والدین کے لیے دعا</h3>
+      <p class="arabic">
+        رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا
+      </p>
+      <p class="translation">
+        اے میرے رب! ان دونوں پر رحم فرما جیسے انہوں نے
+        بچپن میں میری پرورش کی۔
+      </p>
+      <p class="small">سورۃ الإسراء 17:24</p>
+      <a class="btn" href="https://quran.com/17/24"
+         target="_blank" rel="noopener">حوالہ دیکھیں</a>
+    </div>
+
+    <div class="card">
+      <h3>مغفرت کی دعا</h3>
+      <p class="arabic">
+        رَبَّنَا ظَلَمْنَا أَنْفُسَنَا
+        وَإِنْ لَمْ تَغْفِرْ لَنَا
+        وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ
+      </p>
+      <p class="translation">
+        اے ہمارے رب! ہم نے اپنی جانوں پر ظلم کیا،
+        اور اگر تو ہمیں نہ بخشے اور ہم پر رحم نہ فرمائے
+        تو ہم ضرور نقصان اٹھانے والوں میں سے ہو جائیں گے۔
+      </p>
+      <p class="small">سورۃ الأعراف 7:23</p>
+      <a class="btn" href="https://quran.com/7/23"
+         target="_blank" rel="noopener">حوالہ دیکھیں</a>
+    </div>
+  </div>
+</section>
+
+<section id="azkar">
+  <h2 class="section-title">🌿 اذکار اور روزمرہ کی دعائیں</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>استغفار</h3>
+      <p class="arabic">أَسْتَغْفِرُ اللَّهَ</p>
+      <p>میں اللہ سے بخشش طلب کرتا ہوں۔</p>
+    </div>
+
+    <div class="card">
+      <h3>اللہ کی حمد</h3>
+      <p class="arabic">الْحَمْدُ لِلَّهِ</p>
+      <p>تمام تعریفیں اللہ ہی کے لیے ہیں۔</p>
+    </div>
+
+    <div class="card">
+      <h3>اللہ کی پاکی</h3>
+      <p class="arabic">سُبْحَانَ اللَّهِ</p>
+      <p>اللہ ہر عیب سے پاک ہے۔</p>
+    </div>
+
+    <div class="card">
+      <h3>اللہ سب سے بڑا ہے</h3>
+      <p class="arabic">اللَّهُ أَكْبَرُ</p>
+      <p>اللہ سب سے بڑا ہے۔</p>
+    </div>
+
+    <div class="card">
+      <h3>سونے، جاگنے اور سفر کی دعائیں</h3>
+      <p>
+        مسنون دعاؤں کے اصل عربی متن، ترجمے اور حدیث کے
+        حوالوں کے لیے معتبر مجموعہ ملاحظہ کریں۔
+      </p>
+      <a class="btn" href="https://sunnah.com/"
+         target="_blank" rel="noopener">مستند دعائیں تلاش کریں</a>
+    </div>
+
+    <div class="card">
+      <h3>صبح و شام کے اذکار</h3>
+      <p>
+        اذکار پڑھتے وقت ان کے الفاظ، تعداد اور فضیلت کے
+        حوالہ کی تصدیق کریں۔
+      </p>
+      <a class="btn" href="https://sunnah.com/"
+         target="_blank" rel="noopener">حدیث کا ماخذ دیکھیں</a>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">🎥 اسلامی ویڈیوز | YouTube Shorts</h2>
+  <p style="text-align:center">
+    آپ کی بھیجی ہوئی ساتوں ویڈیوز کے لنکس:
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>اسلامی ویڈیو 1</h3>
+      <a class="btn" href="https://youtube.com/shorts/aEPrmUXatuQ"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+
+    <div class="card">
+      <h3>اسلامی ویڈیو 2</h3>
+      <a class="btn" href="https://youtube.com/shorts/hvrFKL6hTsQ"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+
+    <div class="card">
+      <h3>اسلامی ویڈیو 3</h3>
+      <a class="btn" href="https://youtube.com/shorts/2YH3oakUD-E"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+
+    <div class="card">
+      <h3>اسلامی ویڈیو 4</h3>
+      <a class="btn" href="https://youtube.com/shorts/A8OeH4FjYHs"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+
+    <div class="card">
+      <h3>اسلامی ویڈیو 5</h3>
+      <a class="btn" href="https://youtube.com/shorts/0Hxkh5hiQNs"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+
+    <div class="card">
+      <h3>اسلامی ویڈیو 6</h3>
+      <a class="btn" href="https://youtube.com/shorts/4j2_kT5Br5M"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+
+    <div class="card">
+      <h3>اسلامی ویڈیو 7</h3>
+      <a class="btn" href="https://youtube.com/shorts/cMNzlv09E_A"
+         target="_blank" rel="noopener">ویڈیو دیکھیں ▶</a>
+    </div>
+  </div>
+</section>
+
+<section id="reminders">
+  <h2 class="section-title">✨ اسلامی یاددہانیاں</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>نماز</h3>
+      <p>نماز کی پابندی کریں اور اپنے وقت کو نیکی کے کاموں میں لگائیں۔</p>
+    </div>
+
+    <div class="card">
+      <h3>اچھے اخلاق</h3>
+      <p>سچ بولیں، نرمی سے بات کریں اور دوسروں کے حقوق کا خیال رکھیں۔</p>
+    </div>
+
+    <div class="card">
+      <h3>قرآن سے تعلق</h3>
+      <p>روزانہ قرآن کی تلاوت کریں اور اس کا مفہوم سمجھنے کی کوشش کریں۔</p>
+    </div>
+
+    <div class="card">
+      <h3>علم حاصل کریں</h3>
+      <p>دینی معلومات مستند کتابوں اور قابل اعتماد اہل علم سے سیکھیں۔</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">ہمارے بارے میں | About Us</h2>
+  <div class="card">
+    <h3>Noor ul Huda — نور الہدیٰ</h3>
+    <p>
+      Noor ul Huda ایک اسلامی تعلیمی ویب سائٹ ہے جس کا مقصد
+      قرآن پاک، ترجمہ، تفسیر، احادیث اور دعاؤں کے مستند ذرائع
+      تک رسائی آسان بنانا ہے۔
+    </p>
+    <p>
+      ہماری کوشش ہے کہ دینی معلومات حوالوں کے ساتھ پیش کی جائیں
+      تاکہ قارئین اصل ماخذ سے بھی تصدیق کر سکیں۔
+    </p>
+    <p>
+      Learn • Reflect • Practice
+    </p>
+  </div>
+</section>
+
+<section id="sources">
+  <h2 class="section-title">مستند اسلامی ذرائع</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>قرآن پاک</h3>
+      <a class="btn" href="https://quran.com/"
+         target="_blank" rel="noopener">Quran.com</a>
+    </div>
+    <div class="card">
+      <h3>احادیث مبارکہ</h3>
+      <a class="btn" href="https://sunnah.com/"
+         target="_blank" rel="noopener">Sunnah.com</a>
+    </div>
+    <div class="card">
+      <h3>قرآن ڈیٹا کی معلومات</h3>
+      <a class="btn" href="https://api-docs.quran.com/"
+         target="_blank" rel="noopener">Quran Foundation API</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h2 class="gold">Noor ul Huda | نور الہدیٰ</h2>
+  <p>اللہ تعالیٰ ہمیں قرآن و سنت کو سمجھنے اور ان پر عمل کرنے کی توفیق عطا فرمائے۔ آمین۔</p>
+  <p>© <span id="year"></span> Noor ul Huda</p>
+  <a href="#home">واپس اوپر جائیں ↑</a>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+document.getElementById("quranSearch").addEventListener("input", function () {
+  const query = this.value.trim().toLowerCase();
+
+  document.querySelectorAll(".surah").forEach(function (card) {
+    const name = card.dataset.name.toLowerCase();
+    card.hidden = !name.includes(query);
+  });
+});
+</script>
+
+</body>
+</html>
